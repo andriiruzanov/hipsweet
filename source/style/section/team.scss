@@ -1,0 +1,103 @@
+
+.section-team {
+	height: 1420px;
+}
+.team-wrap {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+.team-title {
+	width: 20%;
+	margin-bottom: 34px;
+    font-size: 3.9rem;
+    color: $blue;
+}
+.team__nav {
+	width: 80%;
+}
+.team__nav-list {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+.team__nav-item {
+	position: relative;
+	min-width: 35%;
+	padding: 30px;
+	border-radius: 20px;
+	cursor: pointer;
+	margin-left: 5px;
+	&:first-child {
+		margin-left: 0;
+	}
+		
+	&:hover {
+		background: #893213;
+
+		.team__nav-title {
+			color: #ffa92b;
+		}
+		.team__nav-desc {
+			color: $white;
+		}
+	}
+
+}
+.team__nav-link {
+
+}
+
+.team__nav-title {
+	font-size: 2rem;
+	color: $blue;
+}
+.team__nav-desc {
+	font-family: ArialRegular;
+}
+// .member__item {
+// 	width: 1100px;
+// }
+.member__item {
+	display: flex;
+	display: none;
+	// flex-direction: row;
+	// justify-content: space-between;
+	
+
+}
+
+//скрываем ненужные блоки с резюме повара
+.member__item {
+	display: flex;
+	display: none;
+
+}
+
+.member__list_active {
+		display: block;
+		display: flex;
+		
+
+}
+ // меняем цвет блока при нажатии на имя повара
+.team__nav-item.member__list_active {
+	background: #893213;
+	.team__nav-title {
+		color: #ffa92b;
+	}
+	.team__nav-desc {
+		color: $white;
+	}
+}
+.member__list {
+	width: 33%;
+}
+.cook-member {
+	height: 600px;
+	width: 40%;
+	background: url('../img/content/cook-member.png');
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+}

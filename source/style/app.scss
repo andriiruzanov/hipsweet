@@ -1,0 +1,36 @@
+
+// adjustment variables
+$container-width: 1100px;
+$footer-height: 50px;
+$body-font: malina, Arial, sans-serif;
+
+// colors
+// $red: #e85f61;
+// $blue: #33c1e3;
+$white: #ffffff;
+$black: #414141;
+$yellow: #fca211;
+$blue: #2b2f60;
+$brown: #641a00;
+$grey: #747474;
+
+// layout
+@import "common/adjustment";
+@import "common/mixins";
+@import "common/sprite";
+
+
+@import "common/fonts";
+// @import '_misc/font-awesome';
+
+
+
+// styles
+@import "section/cupcake";
+@import "section/advantages";
+@import "section/goods";
+@import "section/team";
+@import "section/faq"
+
+
+

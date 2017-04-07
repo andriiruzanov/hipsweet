@@ -1,0 +1,540 @@
+// .wrapper {
+//     position: relative;
+// }
+.section-cupcake {
+    min-height: 760px;
+
+    background: url('../img/bg/sweet-cupcake-bg.png') no-repeat;
+    background-size: cover;
+}
+
+// header
+.header {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+
+    margin-bottom: 95px;
+    margin-left: 20px;
+    padding-top: 25px;
+}
+
+
+.header__left {
+   // flex: 1;
+   width: 285px; 
+}
+.logo {
+    display: flex;
+    align-items: center;
+}
+.header__logo {
+    
+}
+
+.logo__avatar {
+    
+
+    width: 80px;
+    height: 66px;
+    margin-right: 15px;
+
+    
+}
+
+.logo__avatar-pic {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.logo-name {
+    font-family: 'malina';
+    font-size: 35px;
+    color: $yellow;
+}
+
+// .header__center
+
+
+.header__center {
+    // flex: 1;
+    width: 520px;
+   
+    margin-left: 100px;
+
+}
+
+.nav__list {
+    display: flex;
+    // justify-content: flex-around;
+}
+.nav__item {
+    font-family: Arial;
+
+    position: relative;
+
+    
+
+    margin-left: 40px;
+
+    letter-spacing: 1.5px;
+    &:first-child {
+        margin-left: 0;
+    }
+    // скрываем псевдоэлемент  у "Доставка"
+    &:nth-child(2) .nav__link:after {
+        display: none;
+    }
+    // скрываем псевдоэлемент по ховеру у "Доставка"
+    &:nth-child(2):hover .nav__link:after {
+        display: none;
+    }
+    &:nth-child(3) {
+        margin-left: 58px;
+    }
+    //=================================================//
+    &:hover .nav__link {
+        color: $yellow;
+        &:after {
+            display: inline-block;
+
+            width: 4px;
+            height: 4px;
+            margin-bottom: 2px;
+            margin-left: 12px;
+
+            //.nav__item:hover .nav__link:after
+
+            content: '';
+            transition: .3s;
+            transform: rotate(225deg);
+
+            border-right: 1px solid $yellow;
+            border-bottom: 1px solid $yellow;
+        }
+    }
+    &:hover .command__dropdown {
+        display: block;
+    }
+}
+
+.nav__link {
+    transition: .3s;
+    text-decoration: none;
+
+    color: $white;
+    &:after {
+        display: inline-block;
+
+        width: 4px;
+        height: 4px;
+        margin-bottom: 2px;
+        margin-left: 12px;
+
+        content: '';
+        transition: .3s;
+        transform: rotate(45deg);
+
+        border-right: 1px solid #fff;
+        border-bottom: 1px solid #fff;
+    }
+}
+
+
+.command__dropdown {
+    position: absolute;
+    left: -60px;
+
+    display: none;
+
+    width: 200px;
+    margin-top: 10px;
+
+    border: 1px solid #000;
+    background: $white;
+    &:before
+    {
+        position: absolute;
+        top: -13px;
+        right: 0;
+        left: 0;
+
+        height: 13px;
+
+        content: '';
+    }
+}
+
+.command__dropdown-triangle-list
+{
+    position: relative;
+    &:before
+    {
+        position: absolute;
+        top: -10px;
+        left: 50%;
+
+        display: block;
+
+        width: 0;
+        height: 0;
+
+        content: '';
+
+        border: 10px solid transparent;
+        border-top-width: 0;
+        // transform: rotate(0deg) skewY(0deg) skewx(-33deg);
+        border-bottom-color: #000;
+    }
+    &:after
+    {
+        position: absolute;
+        top: -10px;
+        left: 50%;
+
+        display: block;
+
+        width: 0;
+        height: 0;
+        margin-top: 1px;
+
+        content: '';
+
+        border: 10px solid transparent;
+        border-top-width: 0;
+        // transform: rotate(0deg) skewY(0deg) skewx(-33deg);
+        border-bottom-color: $white;
+    }
+}
+
+.command__dropdown-item
+{
+    position: relative;
+
+    padding: 10px;
+    &:hover {
+        // треугольник внутри списка
+        &:after {
+            position: absolute;
+            top: 50%;
+            right: 100%;
+            left: 0;
+
+            width: 0;
+            height: 0;
+            margin-top: -5px; //половина высоты стрелки
+            //.command__dropdown-item:hover:after
+
+            content: '';
+
+            border-top: 5px solid transparent;
+            border-right: 5px solid transparent;
+            border-bottom: 5px solid transparent;
+            border-left: 5px solid $yellow;
+        }
+    }
+}
+
+// header__right
+
+
+.header__right
+{
+    // flex: 1;
+    // align-items: center;
+    width: 107px;
+    margin-left: 45px;
+
+   
+}
+
+.header__search-link {
+    margin-left: 20px;
+}
+
+.sprite-checkin {
+    display: inline-block;
+
+    vertical-align: middle;
+
+    @include sprite($checkin);
+    &:hover {
+        @include sprite($checkin-hover);
+    }
+}
+
+.sprite-search {
+    display: inline-block;
+
+    vertical-align: middle;
+
+    @include sprite($search);
+    &:hover {
+        @include sprite($search-hover);
+    }
+}
+
+// product-slide
+
+.product__desc {
+    position: relative;
+    z-index: 2;
+    
+}
+.product__bg {
+    position: absolute;
+    top: 26%;
+    left: 0;
+    right: 0;
+    // margin-left: 22px;
+    font-size: 150px;
+    line-height: 200px;
+    color: rgba(255,255,255,.1);
+    text-transform: uppercase;
+    z-index: -1;
+
+
+}
+.product__list {
+    display: flex;
+}
+
+.product__item-left {
+    flex: 1;
+    
+
+  
+
+   
+    padding-top: 57px;
+}
+
+.product__ingredients {
+    display: inline-block;
+}
+            // ingredients dropdown
+
+.product__ingredients-link {
+    position: relative;
+    
+    &:hover .product__dropdown {
+        display: block;
+    }
+}
+
+.product__dropdown {
+    position: absolute;
+    top: -50px;
+    left: 100px;
+
+    display: none;
+
+    width: 350px;
+    font-size: 1rem;
+    color: grey;
+
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, .80);
+    &:before {
+        position: absolute;
+        top: -13px;
+        // background: white;
+        right: 100%;
+
+        width: 35px;
+        height: 230px;
+
+        content: '';
+    }
+}
+.product__dropdown-triangle-list {
+    position: relative;
+    &:before {
+        position: absolute;
+        top: 35%;
+        right: 100%;
+        left: -15px;
+
+        display: block;
+
+        width: 0;
+        height: 0;
+
+        content: '';
+        transform: rotate(-90deg) skewY(0deg) skewx(0deg);
+
+        border: 10px solid transparent;
+        border-top-width: 0;
+        border-bottom-color: rgba(255, 255, 255, .80);
+    }
+    // &:after {
+    // content: "";
+    // display: block;
+    // width: 0;
+    // height: 0;
+    // border: 10px solid transparent;
+    // border-top-width: 0px;
+    // position: absolute;
+    // top: 35%;
+    // right: 100%;
+    // left: -10px;
+    // transform: rotate(-90deg) skewY(0deg) skewx(0deg);
+    // border-bottom-color: $white;
+    // margin-top: 1px;
+    // } 
+}
+
+.table {
+    width: 100%;
+}
+
+.td-flour {
+    width: 20px;
+    height: 20px;
+
+    @include sprite($flour);
+}
+.td-egg {
+    @include sprite($egg);
+}
+.td-sugar {
+    @include sprite($sugar);
+}
+.td-butter {
+    @include sprite($butter);
+}
+.td-milk {
+    @include sprite($milk);
+}
+
+
+.td-prod {
+    width: 130px;
+
+    text-align: left;
+}
+
+
+.product__ingredients-text {
+    text-align: center;
+}
+
+.product__ingredients-img {
+    margin-bottom: 190px;
+
+    text-align: center;
+}
+.product__ingredients-text {   
+
+    font-family: ArialRegular;
+    font-size: .94rem;
+    // line-height: 15px;
+    color: $white;
+}
+.product__ingredients-time {
+    padding-left: 3px;
+
+    font-family: malina;
+    font-size: 1.5rem;
+    line-height: 1.2;
+
+    color: $white;
+}
+
+
+
+// .product__item-center
+
+
+
+.product__item-center {
+
+    flex: 3;
+
+    margin-left: 5px;
+}
+
+.cupcake-pic {
+    width: 460px;
+    height: 502px;
+
+    background-position: 50% 180%;
+    background-size: cover;
+}
+
+
+
+// .product__item-right
+
+
+.product__item-right {
+    flex: 3;     
+    padding-top: 5px;
+    margin-left: 90px;
+
+
+}
+
+
+.product__ingredients-link {
+    display: inline-block;
+    margin-bottom: 10px;
+}
+.sprite-ingred {
+    display: inline-block;
+    @include sprite($ingred);
+    &:hover {
+        @include sprite($ingred-hover);
+    }
+}
+
+
+.title
+{
+    line-height: 75px;
+}
+
+.cupcake-title {   
+    font-size: 3.9rem;
+    margin-bottom: 25px;
+    color: $white;
+}
+.cupcake-desc {
+    margin-bottom: 25px;
+    font-family: ArialRegular;
+    font-size: 0.94rem;
+    line-height: 21px;
+    
+
+    color: $white;
+}
+.cupcake-price  {   display: inline-block;
+    margin-right: 50px;
+    vertical-align: middle;
+    font-family: malina;
+    font-size: 62px;
+    line-height: 77px;
+    text-align: center;
+    color: $white;
+}
+
+.cupcake-order {   display: inline-block;
+    vertical-align: middle;
+    padding: 15px 22px;
+    font-family: ArialBold;
+    font-size: 14px;
+    line-height: 13px;
+    background-color: $yellow;
+    cursor: pointer;
+    color: #a4151c;
+    border-radius: 25px;
+    
+    &:hover {
+        color: $yellow;
+        background-color: $brown;
+    }
+}
+
+

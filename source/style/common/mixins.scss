@@ -1,0 +1,21 @@
+
+%clearfix {
+	&:after {
+		content: "";
+		display: block;
+		clear: both;
+	}
+}
+
+@mixin inlineblock($valign:top){
+	display: inline-block;
+	vertical-align: $valign;
+}
+
+@mixin inlineblock($valign:middle){
+	display: inline-block;
+	vertical-align: $valign;
+}
+
+//Fonts
+

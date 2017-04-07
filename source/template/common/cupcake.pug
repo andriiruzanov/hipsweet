@@ -1,0 +1,84 @@
+section.section-cupcake
+	.container
+		header.header
+			.header__left
+				a.header__logo
+					.logo
+						.logo__avatar
+							img.logo__avatar-pic(src="/assets/img/icons/logo.png")
+						.logo-name  Hipsweet
+			.header__center
+				nav.nav
+					ul.nav__list
+						li.nav__item
+							a(href="#").nav__link
+								|Сладости
+						li.nav__item
+							a(href="#").nav__link
+								|Доставка
+						li.nav__item
+							a(href="#").nav__link
+								|Компания
+						li.nav__item
+							a(href="#").nav__link
+								|Команда
+							.command__dropdown
+								ul.command__dropdown-triangle-list
+									li.command__dropdown-item
+										|Тони Ройстер
+										span.command__dropdown-text
+									li.command__dropdown-item
+										|Ричард Джейнс
+										span.command__dropdown-text
+									li.command__dropdown-item
+										|Сокирко Евгени
+										span.command__dropdown-text
+			.header__right
+				a(href="#").header__checkin-link
+					span.sprite-checkin
+				a(href="#").header__search-link
+					span.sprite-search
+					//- product-slide
+		.product__desc
+			ul.product__list
+				li.product__item-left
+					.product__ingredients
+						.product__ingredients-img
+							a(href="#").product__ingredients-link
+								span.sprite-ingred
+								.product__dropdown
+									.product__dropdown-triangle-list
+										table.table
+											tbody
+												tr.row
+													td.td-flour
+													td.td-prod мука пшеничная
+													td 200 гр.
+												tr.row
+													td.td-egg
+													td.td-prod яйца
+													td 3 шт.
+												tr.row
+													td.td-sugar
+													td.td-prod сахарный песок
+													td 20 гр.
+												tr.row
+													td.td-butter
+													td.td-prod масло сливочное
+													td 50 гр.
+												tr.row
+													td.td-milk
+													td.td-prod молоко сгущеное
+													td 100 гр.
+							p.product__ingredients-text Ингредиенты
+						.product__ingredients-time
+							div.product__ingredients-text Срок хранения:
+							div.product__ingredients-time 120 часов
+				li.product__item-center
+					.cupcake-pic(style="background-image: url('/assets/img/content/cupcake.png')")
+					.product__bg пирожинка
+				li.product__item-right
+					p.cupcake-title.title Sweet Cupcake
+					p.cupcake-desc В основе пирожного Sweet Cupcake выпеченный бисквит, промоченный сахарным сиропом с добавлением коньяка и десертного вина. Прослоено суфлейной массой, смешанной с апельсиновым концентратом (калоризатор).Заглазировано шоколадной глазурью с нанесением сеточки из белой шоколадной глазури
+					.cupcake-price 199 ¤
+					a.cupcake-order Заказать
