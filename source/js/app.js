@@ -42,3 +42,7 @@ $(document).ready(function() {
   	$(this).parents().find('ul.richard').addClass('member__item');
 });
 });
+
+
+
+$('.order__phone').inputmask({ mask: "+38(999)999-99-99"});
