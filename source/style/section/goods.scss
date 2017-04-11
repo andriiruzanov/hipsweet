@@ -1,5 +1,6 @@
 .section-goods {
 	background: url('../img/bg/goods-pattern-bg.png');
+	padding-bottom: 50px;
 }
 .about-us {
 	
@@ -27,9 +28,7 @@
 .delivery__list {
 	display: flex;
 	flex-flow: row wrap;
-	
-	
-	
+		
 }
 .delivery__item {
 	width: 25%;

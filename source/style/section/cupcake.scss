@@ -3,8 +3,8 @@
 // }
 .section-cupcake {
     min-height: 760px;
-
-    background: url('../img/bg/sweet-cupcake-bg.png') no-repeat;
+background: linear-gradient(to right,#cd3438 0,#a3161c 100%);
+    // background: url('../img/bg/sweet-cupcake-bg.png') no-repeat;
     background-size: cover;
 }
 
@@ -277,11 +277,55 @@
 }
 
 // product-slide
+.slide {
+    
+   
+   
+}
 
+//перебиваем стили слайдера
+.bx-wrapper {
+   margin-bottom: 0;
+   background: transparent;
+    box-shadow: 0 0; 
+    border: 0; 
+     
+    
+}
+
+.bx-wrapper .bx-prev {
+    left: -35px;
+    background: url('/assets/img/icons/controls.png') 0 -32px no-repeat;
+   
+
+
+}
+
+.bx-wrapper .bx-next {
+    right: -35px;
+    background: url('/assets/img/icons/controls.png') -43px -32px no-repeat;
+}
+
+.bx-wrapper .bx-pager.bx-default-pager a.active, .bx-wrapper .bx-pager.bx-default-pager a:focus, .bx-wrapper .bx-pager.bx-default-pager a:hover {
+    background: $yellow;
+}
+
+.bx-wrapper .bx-pager.bx-default-pager a {
+    background: $white;
+    text-indent: -9999px;
+    display: block;
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+    outline: 0;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
 .product__desc {
     position: relative;
     z-index: 2;
-    
+
 }
 .product__bg {
     position: absolute;

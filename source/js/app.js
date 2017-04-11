@@ -41,8 +41,25 @@ $(document).ready(function() {
   	$(this).parents().find('ul.toni').addClass('member__item');
   	$(this).parents().find('ul.richard').addClass('member__item');
 });
+
+	$('.slider3').bxSlider({
+		slideWidth: 1100,
+	    minSlides: 1,
+	    maxSlides: 1,
+	    slideMargin: 20,
+	    // auto: true,
+  		pause: 3000,
+  		controls: true
+
+
+  	});
+	
+	$('.order__phone').inputmask({ mask: "+38(999)999-99-99"});
 });
 
 
 
-$('.order__phone').inputmask({ mask: "+38(999)999-99-99"});
+
+
+
+  
