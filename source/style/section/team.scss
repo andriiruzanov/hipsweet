@@ -31,6 +31,25 @@
 	border-radius: 20px;
 	cursor: pointer;
 	margin-left: 5px;
+
+	&.active {
+		position: relative;
+
+		&:before {
+			content: "";
+		    display: block;
+		    position: absolute;
+		    border: 13px solid transparent;
+		    border-left-width: 20px;
+		    border-right-width: 20px;
+		    border-top-color: #893213;
+		    top: 100%;
+		    left: 50%;
+		    transform: translateX(-50%);
+		}
+    
+	}
+
 	&:first-child {
 		margin-left: 0;
 	}
@@ -48,7 +67,7 @@
 
 }
 .team__nav-link {
-
+	text-decoration: none;
 }
 
 .team__nav-title {
@@ -67,30 +86,20 @@
 	font-size: 0.875rem;
 	line-height: 21px;
 }
-.member__item {
-	display: flex;
-	display: none;
-	// flex-direction: row;
-	// justify-content: space-between;
-	
-
-}
 
 //скрываем ненужные блоки с резюме повара
 .member__item {
-	display: flex;
 	display: none;
 
-}
-
-.member__list_active {
-		display: block;
-		display: flex;
-		
+	&.active {
+		display: flex; 
+	}
 
 }
+
+
  // меняем цвет блока при нажатии на имя повара
-.team__nav-item.member__list_active {
+.team__nav-item.active {
 	background: #893213;
 	.team__nav-title {
 		color: #ffa92b;
@@ -102,13 +111,24 @@
 .member__list {
 	width: 33%;
 }
-.cook-member {
+.toni-cook {
 	height: 600px;
 	width: 40%;
 	background: url('../img/content/cook-member.png');
 	background-size: cover;
 	background-position: center center;
 	background-repeat: no-repeat;
+
+}
+.richard-cook {
+	height: 600px;
+	width: 40%;
+	background: url('../img/content/cook.png');
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: contain;
+
 }
 
 //order

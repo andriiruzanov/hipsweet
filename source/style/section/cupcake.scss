@@ -169,6 +169,8 @@
 .command__dropdown-triangle-list
 {
     position: relative;
+    z-index: 999;
+    padding: 20px;
     &:before
     {
         position: absolute;
@@ -211,7 +213,7 @@
 .command__dropdown-item
 {
     position: relative;
-
+        white-space: nowrap;
     padding: 10px;
     &:hover {
         // треугольник внутри списка
@@ -238,7 +240,13 @@
 
 // header__right
 
-
+.command__dropdown-text {
+    cursor: pointer;
+    &:hover {
+        font-weight: 700;
+    }
+    
+}
 .header__right
 {
     // flex: 1;
@@ -294,7 +302,7 @@
 
 .bx-wrapper .bx-prev {
     left: -35px;
-    background: url('/assets/img/icons/controls.png') 0 -32px no-repeat;
+    background: url('../img/icons/controls.png') 0 -32px no-repeat;
    
 
 
@@ -302,7 +310,7 @@
 
 .bx-wrapper .bx-next {
     right: -35px;
-    background: url('/assets/img/icons/controls.png') -43px -32px no-repeat;
+    background: url('../img/icons/controls.png') -43px -32px no-repeat;
 }
 
 .bx-wrapper .bx-pager.bx-default-pager a.active, .bx-wrapper .bx-pager.bx-default-pager a:focus, .bx-wrapper .bx-pager.bx-default-pager a:hover {
@@ -382,11 +390,11 @@
     background-color: rgba(255, 255, 255, .80);
     &:before {
         position: absolute;
-        top: -13px;
+        
         // background: white;
         right: 100%;
 
-        width: 35px;
+        width: 60px;
         height: 230px;
 
         content: '';

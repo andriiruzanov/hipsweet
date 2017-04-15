@@ -12,37 +12,59 @@
 	margin-bottom: 50px;
 	text-align: center;
 }
-.faq__list {
+.acco {
 	width: 90%;
 	margin: 0 auto;
 }
-.faq__item {
+.acco__item {
+
 	margin-bottom: 30px;
 	font-family: ArialRegular;
 	font-size: 1.375rem;
-	line-height: 31px;
+	line-height: 50px;
 	list-style: decimal;
 	cursor: pointer;
 	border-bottom: 3px dashed $white;
+
+	&:hover {
+		color: $yellow;
+	}
+
+	&.active  {
+		color: $yellow;
+
+		.acco__trigger {
+			color: $yellow;
+		}
+		
+	}
 	
 	
 }
-.faq__desc-wrap {
+.acco__trigger {
 	margin-top: 30px;
+	text-decoration: none;
+	font-size: 20px;
+	color: $white;
+	display: block;
+	
+
+	&:hover {
+		color: $yellow;
+	}
+	
+
 }
 
-.faq__desc-wrap {
+.acco__content {
 	display: none;
 }
-// .faq__item .faq__desc_active {
-// 	display: block;
-
-// }
 
 .faq__desc {
 	font-family: ArialRegular;
 	font-size: 0.9375rem;
 	line-height: 21px;
 	margin-bottom: 30px;
+	color: $white;
 
 }
